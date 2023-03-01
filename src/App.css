@@ -167,7 +167,7 @@ ul.c4u-nav-link {
   position: absolute;
   top: 50%;
   width: 100%;
-  height: 2px;
+  height: 1px;
   transform: translateY(-50%);
   /* background-color: #DA0037; */
   display: inline-block;
