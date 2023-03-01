@@ -15,7 +15,7 @@ const Home = () => {
   } else if (status === 'error') {
     console.log('Error...')
   } else {
-    content = <RecommendChord data={data} status={status} title="CHORD FOR YOU"  />
+    content = <RecommendChord data={data} status={status} title="# CHORD FOR YOU"  />
   }
 
   return (
