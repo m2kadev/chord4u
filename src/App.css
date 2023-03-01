@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/* ---------------- Global CSS ----------------- */
+
+.c4u-main-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #DA0037;
+}
+
+/* ---------------- Main Wrapper Css -------------- */
+
+.chord-app-wrapper {
+  width: 100vw;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.c4u-main-wrapper {
+  padding: 2rem 4vw;
+  background-color: #444444;
+  color: #EDEDED;
+  width: 100%;
+}
+
+
+/* ---------------- Navbar CSS -------------------- */
+.c4u-navbar-wrapper {
+  width: 100%;
+  padding: 1rem 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #171717;
+}
+
+ul.c4u-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c4u-nav-link li a {
+  color: #EDEDED;
+}
+
+.nav-active {
+  color: #DA0037 !important;
+}
+
+.search-form {
+  flex: 1 1 auto;
+  display: grid;
+  place-items: center;
+}
+
+.search-form-control {
+  width: 80%;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #555555;
+}
+
+.search-form-control input {
+  width: 100%;
+  padding: .8rem 0;
+  padding-left: 60px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #EDEDED;
+}
+
+.search-form-control input::placeholder {
+  color: #EDEDED;
+}
+
+.search-icon-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  background: #555555;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+/* ------------------ Chord Wrapper --------------- */
+
+.chord-wrapper {
+  display: flex;
+  max-width: 100%;
+  position: relative;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+  gap: 8px;
+}
+
+/* --------------------- Chord Card ----------------------- */
+
+.chord-card-wrapper {
+  flex: 0 1 calc(20% - 8px);
+  aspect-ratio: 16 / 9;
+  padding: .1rem;
+  background-color: #555555;
+  color: #EDEDED;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+}
+
+.chord-card {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+  transition: .3s ease-in-out;
+}
+
+.chord-card > h3 {
+  font-size: 1rem;
+}
+
+.chord-card > p {
+  font-size: .8rem;
+  font-weight: 400;
+  display: flex;
   align-items: center;
+  gap: 3px;
+}
+
+/* .chord-card > p > * {
+  flex: 0 0 50%;
+} */
+
+.chord-card-circle {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+  /* background-color: #DA0037; */
+  display: inline-block;
+  transform-origin: left;
+  transition: .2s ease-in-out;
+}
+
+.chord-card-wrapper:hover .chord-card-circle {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  border-radius: 0;
+  transform: rotate(0deg);
+  z-index: -1;
+}
+
+.chord-card-wrapper:hover .chord-card > h3 {
+  color: #171717 !important;
+}
+
+.chord-card-wrapper:hover .chord-card {
+  gap: 5px;
+}
+
+/* ------------------ Footer CSS ----------------- */
+
+.c4u-footer-wrapper {
+  width: 100%;
+  padding: 2rem 4vw;
+  display: grid;
+  place-items: center;
+  color: #171717;
+  background-color: #EDEDED;
+}
+
+/* ------------------ Full Loading CSS -------------------- */
+
+.full-loading-wrapper {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: #171717;
+  z-index: 10;
+}
+
+.full-loading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.full-loading > img {
+  width: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
