@@ -205,7 +205,8 @@ ul.c4u-nav-link {
 
 /* ------------------ Full Loading CSS -------------------- */
 
-.full-loading-wrapper {
+.full-loading-wrapper,
+.show-chord-overlay {
   position: absolute;
   inset: 0;
   display: grid;
