@@ -4,12 +4,14 @@ import Home from '../pages/Home'
 import About from '../pages/About'
 import MusicCategories from '../pages/MusicCategories'
 import Artists from '../pages/Artists'
+import SinglePost from '../pages/SinglePost'
 
 const Main = () => {
   return (
     <div className="c4u-main-wrapper">
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/:id" element={<SinglePost />} />
             <Route path="/about" element={<About />} />
             <Route path="/music-categories" element={<MusicCategories />} />
             <Route path="/artists" element={<Artists />} />
