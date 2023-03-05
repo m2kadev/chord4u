@@ -6,7 +6,7 @@ const ChordCard = ({post}) => {
   const navigate = useNavigate()
 
   const redirectSinglePost = (id) => {
-        return navigate(`/${id}`)
+        return navigate(`/posts/${id}`)
   }
 
   return (

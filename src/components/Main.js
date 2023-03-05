@@ -11,7 +11,7 @@ const Main = () => {
     <div className="c4u-main-wrapper">
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/:id" element={<SinglePost />} />
+            <Route path="/posts/:id" element={<SinglePost />} />
             <Route path="/about" element={<About />} />
             <Route path="/music-categories" element={<MusicCategories />} />
             <Route path="/artists" element={<Artists />} />
